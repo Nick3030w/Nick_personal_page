@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolas Espitia — Dev Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- CURSOR PERSONALIZADO -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- FONDO ANIMADO DE PARTÍCULAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-logo">NE<span class="accent">_</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span>open to work</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-tag">&lt; estudiante de ingeniería /&gt;</div>
+            <h1 class="hero-name">
+                <span class="line">Nicolas</span>
+                <span class="line highlight">Espitia</span>
+            </h1>
+            <p class="hero-sub">Convierto problemas complejos en soluciones tecnológicas.<br>Comunicación clara. Código
+                limpio. Resultados reales.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">Ver proyectos</a>
+                <a href="#contact" class="btn-ghost">Contactarme</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+            <div class="avatar-placeholder">
+                <span>N</span>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-label">01 / about_me</div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">Sobre <span class="accent">mí</span></h2>
+                <p>Soy estudiante de <strong>Ingeniería de Sistemas</strong> en 6to semestre con una mentalidad
+                    orientada a resolver problemas de raíz. Antes de escribir una sola línea de código, me tomo el
+                    tiempo de entender el problema a fondo.</p>
+                <p>He participado en <strong>maratones de programación</strong> y tengo experiencia con bases de datos,
+                    desarrollo web y videojuegos. Mi mayor valor no es solo técnico — es la capacidad de comunicarme con
+                    claridad y trabajar en equipo de forma asertiva.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">6°</span>
+                        <span class="stat-label">Semestre</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Ganas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="card-inner">
+                    <div class="card-line"><span class="key">name</span><span class="val">"Nicolas Andrey Espitia
+                            Suarez"</span></div>
+                    <div class="card-line"><span class="key">role</span><span class="val">"Student Developer"</span>
+                    </div>
+                    <div class="card-line"><span class="key">semester</span><span class="val">6</span></div>
+                    <div class="card-line"><span class="key">location</span><span class="val">"Colombia 🇨🇴"</span>
+                    </div>
+                    <div class="card-line"><span class="key">focus</span><span class="val">"Problem solving"</span>
+                    </div>
+                    <div class="card-line"><span class="key">learning</span><span class="val">true</span></div>
+                    <div class="card-line"><span class="key">openToWork</span><span class="val">true</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-label">02 / skills</div>
+        <h2 class="section-title">Habilidades<span class="accent">.</span></h2>
+        <div class="skills-grid">
+
+            <div class="skill-category">
+                <h3 class="cat-title"><span class="cat-icon">⚙️</span> Lenguajes</h3>
+                <div class="skill-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="cat-title"><span class="cat-icon">🗄️</span> Bases de datos</h3>
+                <div class="skill-tags">
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Modelado relacional</span>
+                    <span class="tag">Consultas SQL</span>
+                    <span class="tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="cat-title"><span class="cat-icon">🧠</span> Habilidades blandas</h3>
+                <div class="skill-tags">
+                    <span class="tag">Comunicación asertiva</span>
+                    <span class="tag">Análisis de problemas</span>
+                    <span class="tag">Aprendizaje rápido</span>
+                    <span class="tag">Trabajo en equipo</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="cat-title"><span class="cat-icon">🛠️</span> Herramientas</h3>
+                <div class="skill-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">VS Code</span>
+                    <span class="tag">IntelliJ IDEA</span>
+                    <span class="tag">PostMan</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-label">03 / projects</div>
+        <h2 class="section-title">Proyectos<span class="accent">.</span></h2>
+        <div class="projects-grid">
+
+            <!-- Proyecto 1 -->
+            <div class="project-card" data-status="completed">
+                <div class="project-header">
+                    <span class="project-status status-done">✓ completado</span>
+                    <div class="project-links">
+                        <!-- Agrega aquí tu link a GitHub cuando lo tengas -->
+                        <!-- <a href="#" target="_blank" class="icon-link">↗</a> -->
+                    </div>
+                </div>
+                <h3 class="project-title">Listas Colaborativas</h3>
+                <p class="project-desc">Aplicación web que permite a múltiples usuarios crear y gestionar listas de
+                    tareas de forma colaborativa en tiempo real.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Java</span>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card featured" data-status="wip">
+                <div class="project-header">
+                    <span class="project-status status-wip">⟳ en progreso</span>
+                    <div class="project-links">
+                        https://github.com/Nick3030w/BlackHole-Inmersive.git
+                        <a href="#" target="_blank" class="icon-link">↗</a>
+                    </div>
+                </div>
+                <div class="wip-badge">WIP</div>
+                <h3 class="project-title">Black Hole — Videojuego</h3>
+                <p class="project-desc">Videojuego desarrollado en Unity basado en la física de agujeros negros.
+                    Mecánicas de gravedad simulada y efectos visuales espaciales.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Unity</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">Game Design</span>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 — Placeholder -->
+            <div class="project-card placeholder">
+                <div class="placeholder-inner">
+                    <span class="placeholder-icon">+</span>
+                    <p>Próximo proyecto</p>
+                    <span class="placeholder-sub">coming soon...</span>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 — Placeholder -->
+            <div class="project-card placeholder">
+                <div class="placeholder-inner">
+                    <span class="placeholder-icon">+</span>
+                    <p>Próximo proyecto</p>
+                    <span class="placeholder-sub">coming soon...</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-label">04 / contact</div>
+        <h2 class="section-title">Hablemos<span class="accent">.</span></h2>
+        <p class="contact-sub">¿Tienes un proyecto, idea o propuesta? Escríbeme directamente.</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <a href="mailto:espitiasuareznicolas@gmail.com" class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span>espitiasuareznicolas@gmail.com</span>
+                </a>
+                <a href="https://github.com/Nick3030w" target="_blank" class="contact-item">
+                    <span class="contact-icon">⌥</span>
+                    <span>github.com/Nick3030w</span>
+                </a>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">mensaje</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto o idea..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-send" id="submit-btn">
+                    <span id="btn-text">Enviar mensaje</span>
+                    <span id="btn-loader" style="display:none;">Enviando...</span>
+                </button>
+                <div id="form-feedback" class="form-feedback"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Diseñado y construido por <span class="accent">Nicolas Espitia</span> · 2026</p>
+        <p class="footer-sub">Hecho con Node.js, Express & mucha paciencia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
