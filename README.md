@@ -16,9 +16,7 @@
 ---
 
 ## 📸 Vista previa
-
-> _Agrega aquí una captura de pantalla de la página._
-> Puedes usar: `![Preview](./screenshots/preview.png)`
+[Preview](./screenshots/preview.png)`
 
 ---
 
