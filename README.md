@@ -96,7 +96,3 @@ Si quieres desplegarlo tú mismo:
 **Nicolás Espitia** — [@Nick3030w](https://github.com/Nick3030w)
 
 ---
-
-<div align="center">
-  <sub>Hecho con ☕ y Node.js</sub>
-</div>
