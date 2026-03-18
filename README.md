@@ -9,7 +9,7 @@
 
 **Página web personal de Nicolás Espitia — portafolio, información general y links a proyectos.**
 
-🚀 **[Ver en vivo →](https://tu-url.up.railway.app)**
+🚀 **[Ver en vivo →](https://nickpersonalpage-production.up.railway.app/#projects)**
 
 </div>
 
