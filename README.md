@@ -47,7 +47,7 @@ Nick_personal_page/
 └── README.md
 ```
 
-> _Ajusta la estructura según cómo esté organizado tu proyecto._
+
 
 ---
 
