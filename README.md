@@ -16,7 +16,7 @@
 ---
 
 ## 📸 Vista previa
-[Preview](./screenshots/preview.png)`
+[Preview](./screenshots/preview.png)
 
 ---
 
