@@ -2,277 +2,852 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nicolas Espitia — Dev Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Nicolás Espitia, estudiante de séptimo semestre de Ingeniería de Sistemas con experiencia en desarrollo móvil, redes de comunicación, bases de datos y servicios cloud.">
+    <meta name="theme-color" content="#111416">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:title" content="Nicolás Espitia — Ingeniería de Sistemas">
+    <meta property="og:description"
+        content="Desarrollo de software, redes, datos e inteligencia artificial con una visión orientada a seguridad.">
+    <title>Nicolás Espitia — Ingeniería de Sistemas</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Nicolás Andrey Espitia Suárez",
+            "jobTitle": "Estudiante de Ingeniería de Sistemas",
+            "email": "mailto:espitiasuareznicolas@gmail.com",
+            "telephone": "+57 304 672 1626",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CO"
+            },
+            "sameAs": [
+                "https://github.com/Nick3030w"
+            ],
+            "knowsAbout": [
+                "Desarrollo de software",
+                "Redes de comunicación",
+                "Bases de datos SQL y NoSQL",
+                "Google Cloud",
+                "Aplicaciones móviles Android",
+                "Ciberseguridad"
+            ]
+        }
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <!-- CURSOR PERSONALIZADO -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="page-atmosphere" aria-hidden="true">
+        <div class="atmosphere-grid"></div>
+        <div class="atmosphere-orb atmosphere-orb--one"></div>
+        <div class="atmosphere-orb atmosphere-orb--two"></div>
+    </div>
 
-    <!-- FONDO ANIMADO DE PARTÍCULAS -->
-    <canvas id="bg-canvas"></canvas>
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#inicio" aria-label="Nicolás Espitia, ir al inicio">
+                <span class="brand-mark">NE</span>
+                <span class="brand-pulse" aria-hidden="true"></span>
+            </a>
 
-    <!-- NAV -->
-    <nav id="navbar">
-        <div class="nav-logo">NE<span class="accent">_</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">sobre mí</a></li>
-            <li><a href="#skills">habilidades</a></li>
-            <li><a href="#projects">proyectos</a></li>
-            <li><a href="#contact">contacto</a></li>
-        </ul>
-        <div class="nav-status">
-            <span class="status-dot"></span>
-            <span>open to work</span>
-        </div>
-    </nav>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+            </button>
 
-    <!-- HERO -->
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-tag">&lt; estudiante de ingeniería /&gt;</div>
-            <h1 class="hero-name">
-                <span class="line">Nicolas</span>
-                <span class="line highlight">Espitia</span>
-            </h1>
-            <p class="hero-sub">Convierto problemas complejos en soluciones tecnológicas.<br>Comunicación clara. Código
-                limpio. Resultados reales.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn-primary">Ver proyectos</a>
-                <a href="#contact" class="btn-ghost">Contactarme</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="orbit-ring ring-1"></div>
-            <div class="orbit-ring ring-2"></div>
-            <div class="orbit-ring ring-3"></div>
-            <div class="avatar-placeholder">
-                <span>N</span>
-            </div>
-        </div>
-        <div class="scroll-hint">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="section-label">01 / about_me</div>
-        <div class="about-grid">
-            <div class="about-text">
-                <h2 class="section-title">Sobre <span class="accent">mí</span></h2>
-                <p>Soy estudiante de <strong>Ingeniería de Sistemas</strong> en 6to semestre con una mentalidad
-                    orientada a resolver problemas de raíz. Antes de escribir una sola línea de código, me tomo el
-                    tiempo de entender el problema a fondo.</p>
-                <p>He participado en <strong>maratones de programación</strong> y tengo experiencia con bases de datos,
-                    desarrollo web y videojuegos. Mi mayor valor no es solo técnico — es la capacidad de comunicarme con
-                    claridad y trabajar en equipo de forma asertiva.</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-num">6°</span>
-                        <span class="stat-label">Semestre</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">3+</span>
-                        <span class="stat-label">Proyectos</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">∞</span>
-                        <span class="stat-label">Ganas</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-card">
-                <div class="card-inner">
-                    <div class="card-line"><span class="key">name</span><span class="val">"Nicolas Andrey Espitia
-                            Suarez"</span></div>
-                    <div class="card-line"><span class="key">role</span><span class="val">"Student Developer"</span>
-                    </div>
-                    <div class="card-line"><span class="key">semester</span><span class="val">6</span></div>
-                    <div class="card-line"><span class="key">location</span><span class="val">"Colombia 🇨🇴"</span>
-                    </div>
-                    <div class="card-line"><span class="key">focus</span><span class="val">"Problem solving"</span>
-                    </div>
-                    <div class="card-line"><span class="key">learning</span><span class="val">true</span></div>
-                    <div class="card-line"><span class="key">openToWork</span><span class="val">true</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-        <div class="section-label">02 / skills</div>
-        <h2 class="section-title">Habilidades<span class="accent">.</span></h2>
-        <div class="skills-grid">
-
-            <div class="skill-category">
-                <h3 class="cat-title"><span class="cat-icon">⚙️</span> Lenguajes</h3>
-                <div class="skill-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="cat-title"><span class="cat-icon">🗄️</span> Bases de datos</h3>
-                <div class="skill-tags">
-                    <span class="tag">MySQL</span>
-                    <span class="tag">Modelado relacional</span>
-                    <span class="tag">Consultas SQL</span>
-                    <span class="tag">PostgreSQL</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="cat-title"><span class="cat-icon">🧠</span> Habilidades blandas</h3>
-                <div class="skill-tags">
-                    <span class="tag">Comunicación asertiva</span>
-                    <span class="tag">Análisis de problemas</span>
-                    <span class="tag">Aprendizaje rápido</span>
-                    <span class="tag">Trabajo en equipo</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="cat-title"><span class="cat-icon">🛠️</span> Herramientas</h3>
-                <div class="skill-tags">
-                    <span class="tag">Unity</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">VS Code</span>
-                    <span class="tag">IntelliJ IDEA</span>
-                    <span class="tag">PostMan</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="section-label">03 / projects</div>
-        <h2 class="section-title">Proyectos<span class="accent">.</span></h2>
-        <div class="projects-grid">
-
-            <!-- Proyecto 1 -->
-            <div class="project-card" data-status="completed">
-                <div class="project-header">
-                    <span class="project-status status-done">✓ completado</span>
-                    <div class="project-links">
-                        <a href="https://github.com/Nick3030w/Lista-de-compras-colaborativas.git" target="_blank" class="icon-link">Click aquí</a> 
-                    </div>
-                </div>
-                <h3 class="project-title">Listas Colaborativas</h3>
-                <p class="project-desc">Aplicación web que permite a múltiples usuarios crear y gestionar listas de
-                    tareas de forma colaborativa en tiempo real.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">Java</span>
-                </div>
-            </div>
-
-            <!-- Proyecto 2 -->
-            <div class="project-card featured" data-status="wip">
-                <div class="project-header">
-                    <span class="project-status status-wip">⟳ en progreso</span>
-                    <div class="project-links">
-                        
-                        <a href="https://github.com/Nick3030w/BlackHole-Inmersive.git" target="_blank" class="icon-link">Click aquí</a>
-                    </div>
-                </div>
-                <div class="wip-badge">WIP</div>
-                <h3 class="project-title">Black Hole Inmersive Experience</h3>
-                <p class="project-desc">Videojuego educativo desarrollado en Unity basado en la física de agujeros negros.
-                    Mecánicas de gravedad simulada y efectos visuales espaciales. Es mi posible proyecto de grado</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Unity</span>
-                    <span class="tech-tag">C#</span>
-                    <span class="tech-tag">Game Design</span>
-                </div>
-            </div>
-
-            <!-- Proyecto 3 — Placeholder -->
-            <div class="project-card placeholder">
-                <div class="placeholder-inner">
-                    <span class="placeholder-icon">+</span>
-                    <p>Próximo proyecto</p>
-                    <span class="placeholder-sub">coming soon...</span>
-                </div>
-            </div>
-
-            <!-- Proyecto 4 — Placeholder -->
-            <div class="project-card placeholder">
-                <div class="placeholder-inner">
-                    <span class="placeholder-icon">+</span>
-                    <p>Próximo proyecto</p>
-                    <span class="placeholder-sub">coming soon...</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="section-label">04 / contact</div>
-        <h2 class="section-title">Hablemos<span class="accent">.</span></h2>
-        <p class="contact-sub">¿Tienes un proyecto, idea o propuesta? Escríbeme directamente.</p>
-
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <a href="mailto:espitiasuareznicolas@gmail.com" class="contact-item">
-                    <span class="contact-icon">✉</span>
-                    <span>espitiasuareznicolas@gmail.com</span>
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link is-active">Inicio</a></li>
+                    <li><a href="#perfil" class="nav-link">Perfil</a></li>
+                    <li><a href="#capacidades" class="nav-link">Stack</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <a class="availability" href="#contacto">
+                    <span class="availability-dot" aria-hidden="true"></span>
+                    Disponible para colaborar
                 </a>
-                <a href="https://github.com/Nick3030w" target="_blank" class="contact-item">
-                    <span class="contact-icon">⌥</span>
-                    <span>github.com/Nick3030w</span>
-                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="inicio" data-nav-section>
+            <div class="section-shell hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow hero-eyebrow">
+                        <span class="eyebrow-line" aria-hidden="true"></span>
+                        Ingeniería de Sistemas · 7° semestre · Colombia
+                    </p>
+                    <h1>
+                        Ingeniería para sistemas
+                        <span class="hero-highlight">que conectan.</span>
+                    </h1>
+                    <p class="hero-intro">
+                        Soy <strong>Nicolás Espitia</strong>. Desarrollo aplicaciones móviles y soluciones digitales
+                        que integran datos, servicios cloud y experiencias claras, con una base sólida en
+                        <strong>redes de comunicación</strong> y orientación hacia la ciberseguridad.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button--primary" href="#proyectos" data-magnetic>
+                            Explorar proyectos
+                            <svg viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M4 10h11M11 5l5 5-5 5"></path>
+                            </svg>
+                        </a>
+                        <a class="button button--secondary" href="mailto:espitiasuareznicolas@gmail.com"
+                            data-magnetic>
+                            Escribirme
+                        </a>
+                    </div>
+                    <dl class="hero-facts" aria-label="Resumen profesional">
+                        <div>
+                            <dt>Formación</dt>
+                            <dd>7° semestre</dd>
+                        </div>
+                        <div>
+                            <dt>Experiencia</dt>
+                            <dd>Software + redes</dd>
+                        </div>
+                        <div>
+                            <dt>Interés</dt>
+                            <dd>Seguridad + cloud</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <figure class="network-stage" data-tilt data-tilt-strength="2.5">
+                    <div class="stage-toolbar">
+                        <span class="stage-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span>network_overview</span>
+                        <span class="stage-live"><i aria-hidden="true"></i> online</span>
+                    </div>
+
+                    <svg class="topology" viewBox="0 0 600 540" role="img"
+                        aria-label="Visualización conceptual de una red que conecta aplicaciones, datos, nube y seguridad">
+                        <defs>
+                            <linearGradient id="network-gradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#87aa9e"></stop>
+                                <stop offset="1" stop-color="#8291a8"></stop>
+                            </linearGradient>
+                            <filter id="network-glow" x="-100%" y="-100%" width="300%" height="300%">
+                                <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                                <feMerge>
+                                    <feMergeNode in="blur"></feMergeNode>
+                                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <g class="topology-links">
+                            <path d="M300 270 L137 135"></path>
+                            <path d="M300 270 L468 122"></path>
+                            <path d="M300 270 L492 354"></path>
+                            <path d="M300 270 L152 390"></path>
+                            <path d="M137 135 Q300 30 468 122"></path>
+                            <path d="M468 122 Q575 235 492 354"></path>
+                            <path d="M492 354 Q310 505 152 390"></path>
+                            <path d="M152 390 Q42 250 137 135"></path>
+                        </g>
+
+                        <g class="topology-packets" aria-hidden="true">
+                            <circle cx="219" cy="203" r="4"></circle>
+                            <circle cx="385" cy="195" r="4"></circle>
+                            <circle cx="396" cy="312" r="4"></circle>
+                            <circle cx="226" cy="330" r="4"></circle>
+                        </g>
+
+                        <g class="topology-node topology-node--main" transform="translate(300 270)">
+                            <circle class="node-radar" r="72"></circle>
+                            <circle class="node-halo" r="52"></circle>
+                            <circle class="node-core" r="34"></circle>
+                            <text class="node-monogram" text-anchor="middle" dominant-baseline="middle">NE</text>
+                            <text class="node-caption" text-anchor="middle" y="72">SYSTEMS</text>
+                        </g>
+
+                        <g class="topology-node" transform="translate(137 135)">
+                            <circle class="node-pulse" r="30"></circle>
+                            <circle class="node-small" r="22"></circle>
+                            <text text-anchor="middle" dominant-baseline="middle">APP</text>
+                        </g>
+                        <g class="topology-node" transform="translate(468 122)">
+                            <circle class="node-pulse" r="30"></circle>
+                            <circle class="node-small" r="22"></circle>
+                            <text text-anchor="middle" dominant-baseline="middle">WEB</text>
+                        </g>
+                        <g class="topology-node" transform="translate(492 354)">
+                            <circle class="node-pulse" r="30"></circle>
+                            <circle class="node-small" r="22"></circle>
+                            <text text-anchor="middle" dominant-baseline="middle">DATA</text>
+                        </g>
+                        <g class="topology-node" transform="translate(152 390)">
+                            <circle class="node-pulse" r="30"></circle>
+                            <circle class="node-small" r="22"></circle>
+                            <text text-anchor="middle" dominant-baseline="middle">SEC</text>
+                        </g>
+                    </svg>
+
+                    <div class="stage-card stage-card--projects">
+                        <span>Proyectos seleccionados</span>
+                        <strong>04</strong>
+                        <small>ai · mobile · web · game</small>
+                    </div>
+                    <div class="stage-card stage-card--focus">
+                        <span class="stage-card-icon" aria-hidden="true">↗</span>
+                        <div>
+                            <span>Enfoque profesional</span>
+                            <strong>Redes &amp; seguridad</strong>
+                        </div>
+                    </div>
+                    <figcaption class="sr-only">
+                        Mi perfil integra desarrollo de software, redes, datos cloud y orientación a seguridad.
+                    </figcaption>
+                </figure>
             </div>
 
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">nombre</label>
-                    <input type="text" id="name" name="name" placeholder="Tu nombre" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">email</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">mensaje</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto o idea..."
-                        required></textarea>
-                </div>
-                <button type="submit" class="btn-primary btn-send" id="submit-btn">
-                    <span id="btn-text">Enviar mensaje</span>
-                    <span id="btn-loader" style="display:none;">Enviando...</span>
-                </button>
-                <div id="form-feedback" class="form-feedback"></div>
-            </form>
-        </div>
-    </section>
+            <a class="scroll-cue" href="#perfil" aria-label="Continuar hacia mi perfil">
+                <span>Descubrir</span>
+                <i aria-hidden="true"></i>
+            </a>
+        </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Diseñado y construido por <span class="accent">Nicolas Espitia</span> · 2026</p>
-        <p class="footer-sub">Hecho con Node.js, Express & mucha paciencia</p>
+        <section class="profile section" id="perfil" data-nav-section>
+            <div class="section-shell">
+                <header class="section-heading reveal">
+                    <p class="section-index">01 / PERFIL</p>
+                    <h2>Base técnica.<br><span>Visión integral.</span></h2>
+                </header>
+
+                <div class="profile-layout">
+                    <div class="profile-story reveal">
+                        <p class="profile-lead">
+                            Combino <em>desarrollo de software</em>, <em>redes</em> y <em>datos</em> para diseñar
+                            soluciones lógicas, estructuradas y orientadas a la seguridad.
+                        </p>
+                        <div class="profile-copy">
+                            <p>
+                                Curso séptimo semestre de Ingeniería de Sistemas y cuento con conocimientos sólidos en
+                                redes de comunicación y bases de datos SQL y NoSQL. Mi experiencia académica incluye
+                                aplicaciones móviles para Android, persistencia no relacional y laboratorios físicos de
+                                conectividad.
+                            </p>
+                            <p>
+                                He trabajado en modelado de sistemas, modelado de redes y datos en la nube con Google
+                                Cloud. Me caracterizan la responsabilidad, el aprendizaje autónomo, la resolución de
+                                problemas y el trabajo colaborativo con metodologías ágiles como Scrum.
+                            </p>
+                        </div>
+                        <div class="profile-stats">
+                            <div>
+                                <strong>7°</strong>
+                                <span>Semestre actual</span>
+                            </div>
+                            <div>
+                                <strong>04</strong>
+                                <span>Proyectos destacados</span>
+                            </div>
+                            <div>
+                                <strong>SQL</strong>
+                                <span>+ NoSQL &amp; cloud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="path-card reveal" aria-labelledby="path-title">
+                        <div class="path-card-top">
+                            <p>PERFIL / 2026</p>
+                            <span>Séptimo semestre</span>
+                        </div>
+                        <h3 id="path-title">Ingeniería aplicada</h3>
+                        <ol class="path-list">
+                            <li class="is-current">
+                                <span class="path-marker" aria-hidden="true"></span>
+                                <div>
+                                    <small>Desarrollo</small>
+                                    <strong>Soluciones web y móviles</strong>
+                                    <p>Productos Android, interfaces modernas y servicios conectados.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="path-marker" aria-hidden="true"></span>
+                                <div>
+                                    <small>Infraestructura</small>
+                                    <strong>Redes, datos y cloud</strong>
+                                    <p>Laboratorios físicos, modelado de redes y servicios en Google Cloud.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="path-marker" aria-hidden="true"></span>
+                                <div>
+                                    <small>Proyección</small>
+                                    <strong>Seguridad por diseño</strong>
+                                    <p>Sistemas conectados resilientes y protección de activos digitales.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="capabilities section" id="capacidades" data-nav-section>
+            <div class="section-shell">
+                <header class="section-heading section-heading--split reveal">
+                    <div>
+                        <p class="section-index">02 / CAPACIDADES</p>
+                        <h2>Capacidades para<br><span>soluciones conectadas.</span></h2>
+                    </div>
+                    <p>
+                        Una formación que integra desarrollo, infraestructura y datos para abordar cada problema con
+                        criterio técnico y una visión completa del sistema.
+                    </p>
+                </header>
+
+                <div class="capabilities-grid">
+                    <article class="capability-card reveal">
+                        <div class="capability-top">
+                            <span class="capability-number">01</span>
+                            <span class="capability-symbol" aria-hidden="true">⌘</span>
+                        </div>
+                        <h3>Software web &amp; móvil</h3>
+                        <p>Aplicaciones responsivas, productos Android y arquitectura orientada a funcionalidades.</p>
+                        <ul class="tag-list" aria-label="Tecnologías web y móvil">
+                            <li>React 18</li>
+                            <li>Angular 20</li>
+                            <li>Ionic 8</li>
+                            <li>TypeScript</li>
+                            <li>Capacitor</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card reveal">
+                        <div class="capability-top">
+                            <span class="capability-number">02</span>
+                            <span class="capability-symbol" aria-hidden="true">⌁</span>
+                        </div>
+                        <h3>Datos &amp; nube</h3>
+                        <p>Modelado, persistencia y sincronización de datos relacionales y no relacionales.</p>
+                        <ul class="tag-list" aria-label="Tecnologías de datos y nube">
+                            <li>SQL</li>
+                            <li>NoSQL</li>
+                            <li>Cloud Firestore</li>
+                            <li>Firebase</li>
+                            <li>Google Cloud</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card reveal">
+                        <div class="capability-top">
+                            <span class="capability-number">03</span>
+                            <span class="capability-symbol" aria-hidden="true">◎</span>
+                        </div>
+                        <h3>Redes &amp; seguridad</h3>
+                        <p>Modelado de redes, laboratorios físicos de comunicación y diseño orientado a protección.</p>
+                        <ul class="tag-list" aria-label="Capacidades de redes y seguridad">
+                            <li>Redes de comunicación</li>
+                            <li>Modelado de redes</li>
+                            <li>Laboratorios físicos</li>
+                            <li>Seguridad por diseño</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card capability-card--direction reveal">
+                        <div class="capability-top">
+                            <span class="capability-number">04</span>
+                            <span class="capability-symbol" aria-hidden="true">AI</span>
+                        </div>
+                        <span class="learning-label">SISTEMAS INTELIGENTES E INTERACTIVOS</span>
+                        <h3>IA &amp; experiencias</h3>
+                        <p>Interfaces multimodales, visualización y experiencias que vuelven accesible lo complejo.</p>
+                        <ul class="tag-list" aria-label="Tecnologías de inteligencia artificial e interacción">
+                            <li>Gemini 2.5 Flash</li>
+                            <li>IA multimodal</li>
+                            <li>Unity</li>
+                            <li>C#</li>
+                            <li>Framer Motion</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="proyectos" data-nav-section>
+            <div class="section-shell">
+                <header class="section-heading section-heading--split reveal">
+                    <div>
+                        <p class="section-index">03 / PROYECTOS</p>
+                        <h2>Soluciones con<br><span>contexto real.</span></h2>
+                    </div>
+                    <p>
+                        Cuatro proyectos que conectan ingeniería, producto y necesidades concretas: movilidad,
+                        educación, servicios universitarios y presencia digital.
+                    </p>
+                </header>
+
+                <div class="project-list">
+                    <article class="project-case reveal">
+                        <figure class="project-visual moto-preview" data-tilt data-tilt-strength="3" aria-hidden="true">
+                            <span class="visual-caption visual-caption--paper">Vista conceptual · Diagnóstico IA</span>
+
+                            <div class="moto-blueprint">
+                                <span class="blueprint-label blueprint-label--top">ANÁLISIS / COMPONENTE</span>
+                                <span class="blueprint-label blueprint-label--bottom">BOGOTÁ · CO</span>
+                                <svg class="moto-outline" viewBox="0 0 420 250">
+                                    <g class="moto-outline-grid">
+                                        <path d="M20 50H400M20 100H400M20 150H400M20 200H400"></path>
+                                        <path d="M70 20V230M140 20V230M210 20V230M280 20V230M350 20V230"></path>
+                                    </g>
+                                    <g class="moto-drawing">
+                                        <circle cx="105" cy="176" r="48"></circle>
+                                        <circle cx="323" cy="176" r="48"></circle>
+                                        <path d="M105 176 168 165 220 175 184 103 147 108M220 175l47-82 56 83M267 93l-38 2M168 165l46-80 53 8M147 108l-22 9M273 90l23-28M286 63l27 3"></path>
+                                        <path d="M171 104c20-18 54-21 74-6l-23 28h-45Z"></path>
+                                        <circle cx="220" cy="175" r="13"></circle>
+                                    </g>
+                                    <g class="moto-scan-points">
+                                        <circle cx="220" cy="175" r="5"></circle>
+                                        <circle cx="267" cy="93" r="5"></circle>
+                                        <circle cx="171" cy="104" r="5"></circle>
+                                    </g>
+                                </svg>
+                                <i class="moto-scan-line"></i>
+                            </div>
+
+                            <div class="moto-device">
+                                <div class="moto-device-speaker"></div>
+                                <div class="moto-screen">
+                                    <div class="moto-appbar">
+                                        <span class="moto-logo">M</span>
+                                        <span><strong>MotoCheck</strong><small>Asistente mecánico</small></span>
+                                        <i></i>
+                                    </div>
+                                    <div class="moto-welcome">
+                                        <small>DIAGNÓSTICO INTELIGENTE</small>
+                                        <strong>¿Qué notas en tu moto?</strong>
+                                        <p>Analiza una imagen, un sonido o describe el problema.</p>
+                                    </div>
+                                    <div class="moto-capture-grid">
+                                        <div><i>▣</i><strong>Imagen</strong><small>Capturar pieza</small></div>
+                                        <div><i>≈</i><strong>Audio</strong><small>Grabar sonido</small></div>
+                                        <div><i>•••</i><strong>Chat</strong><small>Conversar</small></div>
+                                    </div>
+                                    <div class="moto-result">
+                                        <div class="moto-result-top">
+                                            <span>ÚLTIMO ANÁLISIS</span>
+                                            <strong>87% confianza</strong>
+                                        </div>
+                                        <h4>Tensión irregular de cadena</h4>
+                                        <div class="moto-severity"><i></i> Atención moderada</div>
+                                        <div class="moto-progress"><span></span></div>
+                                    </div>
+                                    <div class="moto-nav"><i></i><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+
+                            <div class="moto-float moto-ai-card">
+                                <span class="moto-float-icon">AI</span>
+                                <div><small>MODELO ACTIVO</small><strong>Gemini 2.5 Flash</strong></div>
+                            </div>
+                            <div class="moto-float moto-audio-card">
+                                <div class="moto-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                <div><small>AUDIO</small><strong>Patrón detectado</strong></div>
+                            </div>
+                            <div class="moto-float moto-cost-card">
+                                <small>ESTIMACIÓN LOCAL</small>
+                                <strong>$80K — $140K <span>COP</span></strong>
+                            </div>
+                        </figure>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">01</span>
+                                <span class="project-status project-status--moto"><i aria-hidden="true"></i> IA multimodal · Android</span>
+                            </div>
+                            <h3>Moto<br>Check</h3>
+                            <p class="project-summary">
+                                Aplicación móvil para motociclistas colombianos que utiliza Google Gemini AI para
+                                analizar imágenes, audio y conversación, ofreciendo diagnósticos presuntivos y una guía
+                                clara para tomar decisiones.
+                            </p>
+                            <dl class="project-facts">
+                                <div><dt>03</dt><dd>Modalidades de análisis</dd></div>
+                                <div><dt>2.5</dt><dd>Gemini Flash</dd></div>
+                                <div><dt>COP</dt><dd>Costos localizados</dd></div>
+                            </dl>
+                            <ul class="project-points">
+                                <li>Reportes con severidad, confianza, causas y soluciones paso a paso.</li>
+                                <li>Geolocalización de talleres cercanos y tutoriales relacionados.</li>
+                                <li>Autenticación, historial y gestión personalizada de motocicletas.</li>
+                            </ul>
+                            <ul class="project-stack" aria-label="Stack de MotoCheck">
+                                <li>React 18</li>
+                                <li>TypeScript 6</li>
+                                <li>Gemini 2.5</li>
+                                <li>Firebase</li>
+                                <li>Capacitor 6</li>
+                                <li>Google Maps</li>
+                                <li>Framer Motion</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/Nick3030w/MotoCheck" target="_blank"
+                                rel="noopener noreferrer">
+                                Explorar repositorio
+                                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"></path></svg>
+                                <span class="sr-only">(abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-case project-case--reverse reveal">
+                        <figure class="project-visual neo-preview" data-tilt data-tilt-strength="3" aria-hidden="true">
+                            <span class="visual-caption">Vista conceptual · Mobile</span>
+                            <div class="neo-orbit neo-orbit--one"></div>
+                            <div class="neo-orbit neo-orbit--two"></div>
+
+                            <div class="neo-phone">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-screen">
+                                    <div class="neo-appbar">
+                                        <span class="neo-avatar">NE</span>
+                                        <span>Hola, Nicolás<small>¿Qué necesitas hoy?</small></span>
+                                        <i></i>
+                                    </div>
+                                    <div class="neo-search"><span>Buscar un recurso</span><b>⌕</b></div>
+                                    <div class="neo-heading"><strong>Recursos</strong><span>Ver todos</span></div>
+                                    <div class="neo-resources">
+                                        <div><i>▦</i><span>Aulas</span><small>12 disponibles</small></div>
+                                        <div><i>⌬</i><span>Laboratorios</span><small>6 disponibles</small></div>
+                                        <div><i>◈</i><span>Deportes</span><small>18 disponibles</small></div>
+                                        <div><i>♫</i><span>Instrumentos</span><small>9 disponibles</small></div>
+                                    </div>
+                                    <div class="neo-bottom-nav"><i></i><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+
+                            <div class="neo-floating-card neo-floating-card--booking">
+                                <span class="mini-icon">✓</span>
+                                <div><small>Reserva confirmada</small><strong>Laboratorio 203</strong></div>
+                            </div>
+                            <div class="neo-floating-card neo-floating-card--sync">
+                                <span class="sync-pulse"></span>
+                                <div><small>Firestore</small><strong>Sincronizado</strong></div>
+                            </div>
+                        </figure>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">02</span>
+                                <span class="project-status"><i aria-hidden="true"></i> Aplicación móvil · Académico</span>
+                            </div>
+                            <h3>Neogranada<br>Conecta</h3>
+                            <p class="project-summary">
+                                Aplicación móvil híbrida que centraliza el préstamo y la reserva de recursos de la
+                                Universidad Militar Nueva Granada, conectando estudiantes y administradores en tiempo
+                                real.
+                            </p>
+                            <dl class="project-facts">
+                                <div><dt>02</dt><dd>Perfiles de usuario</dd></div>
+                                <div><dt>08</dt><dd>Tipos de recurso</dd></div>
+                                <div><dt>Live</dt><dd>Reservas y chat</dd></div>
+                            </dl>
+                            <ul class="project-points">
+                                <li>Disponibilidad y validación de conflictos antes de reservar.</li>
+                                <li>Autenticación, roles y rutas protegidas para cada perfil.</li>
+                                <li>Arquitectura feature-first con servicios reactivos y carga diferida.</li>
+                            </ul>
+                            <ul class="project-stack" aria-label="Stack de Neogranada Conecta">
+                                <li>Angular 20</li>
+                                <li>Ionic 8</li>
+                                <li>Capacitor 8</li>
+                                <li>Firebase</li>
+                                <li>TypeScript</li>
+                                <li>RxJS</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/Nick3030w/Neogranada_Conecta"
+                                target="_blank" rel="noopener noreferrer">
+                                Explorar repositorio
+                                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"></path></svg>
+                                <span class="sr-only">(abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-case reveal">
+                        <figure class="project-visual blackhole-preview" data-tilt data-tilt-strength="3"
+                            aria-hidden="true">
+                            <span class="visual-caption">Vista conceptual · Experiencia 3D</span>
+                            <div class="star-field"></div>
+                            <div class="black-hole-system">
+                                <div class="gravity-ring gravity-ring--one"></div>
+                                <div class="gravity-ring gravity-ring--two"></div>
+                                <div class="accretion-disk"></div>
+                                <div class="photon-ring"></div>
+                                <div class="singularity"></div>
+                            </div>
+                            <div class="science-chip science-chip--time">
+                                <span>Δt</span><div><small>DILATACIÓN</small><strong>Temporal</strong></div>
+                            </div>
+                            <div class="science-chip science-chip--gravity">
+                                <span>G</span><div><small>CAMPO</small><strong>Gravedad extrema</strong></div>
+                            </div>
+                            <div class="telemetry">
+                                <div><span>VELOCIDAD</span><strong>0.72 c</strong></div>
+                                <div><span>DISTANCIA</span><strong>12.4 km</strong></div>
+                                <div><span>ESTADO</span><strong class="telemetry-live">ESTABLE</strong></div>
+                            </div>
+                        </figure>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">03</span>
+                                <span class="project-status project-status--wip"><i aria-hidden="true"></i> Proyecto de grado · En desarrollo</span>
+                            </div>
+                            <h3>Black Hole<br>Immersive</h3>
+                            <p class="project-summary">
+                                Videojuego educativo que propone un viaje al interior de un agujero negro para explicar
+                                física, relatividad y astronomía mediante narrativa, interacción y visualización 3D.
+                            </p>
+                            <dl class="project-facts">
+                                <div><dt>04</dt><dd>Áreas científicas</dd></div>
+                                <div><dt>LTS</dt><dd>Unity 2022.3</dd></div>
+                                <div><dt>C#</dt><dd>Lógica de juego</dd></div>
+                            </dl>
+                            <ul class="project-points">
+                                <li>Aprendizaje integrado en el recorrido, no separado de la experiencia.</li>
+                                <li>Visualización de lente gravitacional, horizonte y fuerzas de marea.</li>
+                                <li>Diseño modular para escenas, scripts, materiales y contenido educativo.</li>
+                            </ul>
+                            <ul class="project-stack" aria-label="Stack de Black Hole Immersive">
+                                <li>Unity 2022.3</li>
+                                <li>C#</li>
+                                <li>Shader Graph</li>
+                                <li>UI Toolkit</li>
+                                <li>Game Design</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/Nick3030w/BlackHole-Inmersive"
+                                target="_blank" rel="noopener noreferrer">
+                                Explorar repositorio
+                                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"></path></svg>
+                                <span class="sr-only">(abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-case project-case--reverse reveal">
+                        <figure class="project-visual logika-preview" data-tilt data-tilt-strength="3" aria-hidden="true">
+                            <span class="visual-caption visual-caption--dark">Vista conceptual · Web</span>
+                            <div class="logika-browser">
+                                <div class="browser-bar">
+                                    <span><i></i><i></i><i></i></span>
+                                    <div>logika.decoracion</div>
+                                    <b>↗</b>
+                                </div>
+                                <div class="logika-page">
+                                    <div class="logika-nav">
+                                        <strong>LOGIKA<span>.</span></strong>
+                                        <span>Catálogo&nbsp;&nbsp; Nosotros&nbsp;&nbsp; Contacto</span>
+                                    </div>
+                                    <div class="logika-copy">
+                                        <small>MUEBLES HECHOS EN BOGOTÁ</small>
+                                        <strong>Diseño que habita<br>contigo.</strong>
+                                        <i>Explorar colección →</i>
+                                    </div>
+                                    <div class="room-scene">
+                                        <div class="wall-frame wall-frame--one"></div>
+                                        <div class="wall-frame wall-frame--two"></div>
+                                        <div class="floor-shadow"></div>
+                                        <div class="lamp"><i></i><span></span><b></b></div>
+                                        <div class="sofa">
+                                            <div class="sofa-back"></div>
+                                            <div class="sofa-seat"></div>
+                                            <div class="sofa-arm sofa-arm--left"></div>
+                                            <div class="sofa-arm sofa-arm--right"></div>
+                                            <div class="sofa-cushion sofa-cushion--one"></div>
+                                            <div class="sofa-cushion sofa-cushion--two"></div>
+                                            <i class="sofa-leg sofa-leg--one"></i><i class="sofa-leg sofa-leg--two"></i>
+                                        </div>
+                                        <span class="product-pin">+</span>
+                                    </div>
+                                    <div class="logika-progress"><span></span><i>01 / 03</i></div>
+                                </div>
+                            </div>
+                        </figure>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">04</span>
+                                <span class="project-status project-status--warm"><i aria-hidden="true"></i> Catálogo digital · Comercial</span>
+                            </div>
+                            <h3>Web<br>Logika</h3>
+                            <p class="project-summary">
+                                Sitio para Logika Decoración, fabricante de muebles en Bogotá. Convierte su trabajo en
+                                un catálogo visual, facilita la exploración por categorías y orienta cada visita hacia
+                                una conversación comercial.
+                            </p>
+                            <dl class="project-facts">
+                                <div><dt>07</dt><dd>Categorías</dd></div>
+                                <div><dt>320+</dt><dd>Diseño responsive</dd></div>
+                                <div><dt>WA</dt><dd>Conversión directa</dd></div>
+                            </dl>
+                            <ul class="project-points">
+                                <li>Catálogo filtrable y páginas individuales para cada producto.</li>
+                                <li>Contenido administrable con Firestore y almacenamiento en la nube.</li>
+                                <li>SEO local, accesibilidad y contacto contextual por WhatsApp.</li>
+                            </ul>
+                            <ul class="project-stack" aria-label="Stack de Web Logika">
+                                <li>Next.js 14</li>
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind CSS</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/Nick3030w/Web-Logika" target="_blank"
+                                rel="noopener noreferrer">
+                                Explorar repositorio
+                                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"></path></svg>
+                                <span class="sr-only">(abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="specialization section" aria-labelledby="specialization-title">
+            <div class="section-shell">
+                <div class="specialization-panel reveal">
+                    <div class="specialization-copy">
+                        <p class="section-index">ENFOQUE PROFESIONAL / EVOLUCIÓN</p>
+                        <h2 id="specialization-title">Conectar con criterio.<br><span>Proteger desde el diseño.</span></h2>
+                        <p>
+                            Estoy consolidando un perfil que une desarrollo, redes y nube para crear tecnología útil,
+                            observable y preparada para responder a los riesgos de sistemas cada vez más conectados.
+                        </p>
+                    </div>
+                    <div class="specialization-path" aria-label="Enfoque de crecimiento profesional">
+                        <article>
+                            <span>01</span>
+                            <div>
+                                <small>BASE TÉCNICA</small>
+                                <h3>Redes &amp; servicios cloud</h3>
+                                <p>Modelado, conectividad, datos y operación de soluciones distribuidas.</p>
+                            </div>
+                        </article>
+                        <div class="path-connector" aria-hidden="true"><i></i></div>
+                        <article>
+                            <span>02</span>
+                            <div>
+                                <small>PROYECCIÓN</small>
+                                <h3>Ciberseguridad</h3>
+                                <p>Protección de datos, arquitecturas resilientes y gestión responsable del riesgo.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contacto" data-nav-section>
+            <div class="section-shell">
+                <div class="contact-layout">
+                    <div class="contact-copy reveal">
+                        <p class="section-index">04 / CONTACTO</p>
+                        <h2>Construyamos el<br><span>siguiente sistema.</span></h2>
+                        <p>
+                            ¿Tienes una idea, una oportunidad o simplemente quieres hablar de tecnología? Mi bandeja de
+                            entrada está abierta.
+                        </p>
+                        <div class="contact-links">
+                            <a href="mailto:espitiasuareznicolas@gmail.com">
+                                <span>EMAIL</span>
+                                <strong>espitiasuareznicolas@gmail.com</strong>
+                                <i aria-hidden="true">↗</i>
+                            </a>
+                            <a href="tel:+573046721626">
+                                <span>TELÉFONO</span>
+                                <strong>+57 304 672 1626</strong>
+                                <i aria-hidden="true">↗</i>
+                            </a>
+                            <a href="https://github.com/Nick3030w" target="_blank" rel="noopener noreferrer">
+                                <span>GITHUB</span>
+                                <strong>@Nick3030w</strong>
+                                <i aria-hidden="true">↗</i>
+                                <span class="sr-only">(abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form reveal" id="contact-form" novalidate>
+                        <div class="form-heading">
+                            <span>Nuevo mensaje</span>
+                            <i aria-hidden="true"></i>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Nombre</label>
+                                <input id="name" name="name" type="text" autocomplete="name" maxlength="100"
+                                    placeholder="¿Cómo te llamas?" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Correo</label>
+                                <input id="email" name="email" type="email" autocomplete="email" maxlength="254"
+                                    placeholder="tu@correo.com" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="6" minlength="10" maxlength="2000"
+                                placeholder="Cuéntame sobre tu idea, proyecto u oportunidad..." required></textarea>
+                        </div>
+                        <div class="form-trap" aria-hidden="true">
+                            <label for="website">No completar este campo</label>
+                            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="form-submit-row">
+                            <button class="button button--primary submit-button" id="submit-btn" type="submit">
+                                <span id="btn-text">Enviar mensaje</span>
+                                <span class="button-loader" id="btn-loader" aria-hidden="true"></span>
+                                <svg viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="m3 10 14-7-4 14-3-5-7-2Z"></path>
+                                </svg>
+                            </button>
+                            <p>Responderé tan pronto como sea posible.</p>
+                        </div>
+                        <div class="form-feedback" id="form-feedback" role="status" aria-live="polite" tabindex="-1"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-inner">
+            <a class="brand brand--footer" href="#inicio" aria-label="Volver al inicio">
+                <span class="brand-mark">NE</span><span class="brand-pulse" aria-hidden="true"></span>
+            </a>
+            <p>Nicolás Espitia · Ingeniería de Sistemas</p>
+            <p>Colombia / <span id="current-year">2026</span></p>
+            <a class="back-to-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
