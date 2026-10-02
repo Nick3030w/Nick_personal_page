@@ -1,0 +1,7 @@
+{
+  "task_id": "Nick_personal_page-redesign-engineering-2025-06-13",
+  "task_description": "Rediseño visual del portafolio de Nicolás Espitia hacia la dirección de arte APROBADA 'hoja de especificación técnica' (design.md): nuevo index.html semántico que conserva todo el contenido literal en español, style.css reescrito con paleta grafito-azul + acento ámbar, tipografías Archivo/JetBrains Mono, retícula de 12 columnas visible, nuevo script.js (navegación, menú móvil y POST /api/contact intactos; revelados con IntersectionObserver y cursor de retícula sobre transform/opacity) y favicon.svg alineado con la nueva identidad. server.js, package.json y package-lock.json no se tocan.",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003", "FEAT-004"],
+  "blocked_reason": null
+}

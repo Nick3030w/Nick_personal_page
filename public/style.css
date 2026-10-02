@@ -1641,320 +1641,346 @@ svg {
     transform: translate(3px, -3px);
 }
 
-/* Neogranada visual */
+/* ----------------------------------------------------------------
+   Neogranada Conecta — recreación fiel de la interfaz
+   ---------------------------------------------------------------- */
 
-.neo-preview {
+.ng-preview {
     background:
-        radial-gradient(circle at 34% 50%, rgba(38, 128, 255, 0.27), transparent 35%),
-        linear-gradient(145deg, #071325, #0a2141 62%, #0b172b);
+        radial-gradient(circle at 80% 10%, rgba(226, 199, 93, 0.12), transparent 32%),
+        linear-gradient(150deg, #0d1628, #15243f 56%, #0f1a2e);
 }
 
-.neo-preview::before {
+.ng-preview::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(102, 168, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(102, 168, 255, 0.05) 1px, transparent 1px);
-    background-size: 38px 38px;
-    mask-image: linear-gradient(black, transparent 90%);
+        linear-gradient(rgba(170, 184, 204, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(170, 184, 204, 0.045) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: linear-gradient(black, transparent 92%);
 }
 
-.neo-orbit {
+.ng-device {
     position: absolute;
-    border: 1px solid rgba(101, 177, 255, 0.14);
-    border-radius: 50%;
-    animation: neo-orbit 16s linear infinite;
+    z-index: 5;
+    top: 7%;
+    right: 4%;
+    bottom: 7%;
+    width: 43%;
+    padding: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 32px;
+    background: #090d16;
+    box-shadow:
+        0 28px 56px rgba(0, 0, 0, 0.44),
+        -14px 0 46px rgba(24, 48, 92, 0.3);
+    transform: translateZ(34px) rotate(1.4deg);
 }
 
-.neo-orbit::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -3px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #68d9ff;
-    box-shadow: 0 0 13px #68d9ff;
-}
-
-.neo-orbit--one {
-    top: 9%;
-    left: -14%;
-    width: 74%;
-    aspect-ratio: 1;
-}
-
-.neo-orbit--two {
-    right: -30%;
-    bottom: -10%;
-    width: 75%;
-    aspect-ratio: 1;
-    animation-direction: reverse;
-    animation-duration: 22s;
-}
-
-@keyframes neo-orbit {
-    to { transform: rotate(360deg); }
-}
-
-.neo-phone {
+.ng-notch {
     position: absolute;
     z-index: 4;
-    top: 9%;
-    bottom: 7%;
-    left: 13%;
-    width: 43%;
-    padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 34px;
-    background: #05090e;
-    box-shadow:
-        0 30px 55px rgba(0, 0, 0, 0.48),
-        -12px 0 55px rgba(46, 139, 255, 0.13);
-    transform: translateZ(32px) rotate(-2deg);
-}
-
-.phone-speaker {
-    position: absolute;
-    z-index: 3;
-    top: 13px;
+    top: 12px;
     left: 50%;
-    width: 32%;
-    height: 15px;
-    border-radius: 10px;
-    background: #05090e;
+    width: 26%;
+    height: 13px;
+    border-radius: 0 0 9px 9px;
+    background: #090d16;
     transform: translateX(-50%);
 }
 
-.phone-screen {
+.ng-screen {
     position: relative;
     height: 100%;
-    padding: 35px 15px 14px;
-    border-radius: 27px;
-    background: linear-gradient(180deg, #f7fbff 0%, #eef5fb 100%);
-    color: #11223c;
+    border-radius: 26px;
+    background: #101a2e;
+    color: #f4f7fb;
     overflow: hidden;
 }
 
-.neo-appbar {
-    display: grid;
-    grid-template-columns: 34px 1fr 8px;
-    align-items: center;
-    gap: 9px;
-    color: #142949;
-    font-family: var(--font-display);
-    font-size: clamp(0.5rem, 0.8vw, 0.68rem);
-    font-weight: 600;
-    line-height: 1.2;
+.ng-topbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 13px 13px 0;
 }
 
-.neo-appbar small {
-    display: block;
-    margin-top: 2px;
-    color: #69809d;
-    font-size: 0.52em;
-    font-weight: 500;
-}
-
-.neo-appbar > i {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #ff745f;
-    box-shadow: 0 0 0 3px rgba(255, 116, 95, 0.13);
-}
-
-.neo-avatar {
+.ng-emblem {
     display: grid;
     place-items: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 11px;
-    background: #193c6f;
-    color: white;
-    font-size: 0.57rem;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(226, 199, 93, 0.45);
+    border-radius: 50%;
+    background: rgba(226, 199, 93, 0.09);
+    color: #e2c75d;
 }
 
-.neo-search {
+.ng-emblem svg {
+    width: 15px;
+    height: 15px;
+}
+
+.ng-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #e2c75d;
+}
+
+.ng-topbar-actions i {
+    position: relative;
+    display: block;
+}
+
+.ng-topbar-actions svg {
+    width: 14px;
+    height: 14px;
+}
+
+.ng-topbar-actions b {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #e05545;
+}
+
+.ng-welcome {
+    margin: 11px 16px 0;
+    font-size: clamp(0.6rem, 1.02vw, 0.88rem);
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    line-height: 1.07;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ng-panel {
+    margin: 15px 9px 0;
+    padding: 12px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.045);
+    border-radius: 17px;
+    background: #1f2e4e;
+}
+
+.ng-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px 10px;
+}
+
+.ng-menu-item {
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    min-width: 0;
+}
+
+.ng-menu-tile {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1.15;
+    border-radius: 13px;
+    background: #aab8cc;
+    color: #16243f;
+}
+
+.ng-menu-item--gold .ng-menu-tile {
+    background: #e2c75d;
+}
+
+.ng-menu-tile svg {
+    width: 44%;
+    max-width: 27px;
+    height: auto;
+}
+
+.ng-menu-item span {
+    max-width: 100%;
+    overflow: hidden;
+    color: #eaf0f8;
+    font-size: clamp(0.25rem, 0.42vw, 0.36rem);
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ng-indicator {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    width: 29%;
+    height: 3px;
+    border-radius: 99px;
+    background: rgba(226, 232, 242, 0.3);
+    transform: translateX(-50%);
+}
+
+.ng-float {
+    position: absolute;
+    z-index: 7;
+    border: 1px solid rgba(226, 199, 93, 0.17);
+    border-radius: 14px;
+    background: rgba(12, 20, 35, 0.93);
+    color: #eaf0f8;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(12px);
+    font-family: var(--font-mono);
+    transform: translateZ(52px);
+    animation: card-float 6.5s ease-in-out infinite;
+}
+
+.ng-bot {
+    top: 11%;
+    left: 4%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 47%;
+    padding: 10px 12px;
+}
+
+.ng-bot-avatar {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #e2c75d;
+    color: #16243f;
+}
+
+.ng-bot-avatar svg {
+    width: 15px;
+    height: 15px;
+}
+
+.ng-bot small {
+    display: block;
+    color: #9fb0c6;
+    font-size: clamp(0.28rem, 0.4vw, 0.35rem);
+    letter-spacing: 0.1em;
+}
+
+.ng-bot strong {
+    display: block;
+    margin-top: 2px;
+    font-size: clamp(0.36rem, 0.54vw, 0.46rem);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.ng-catalog {
+    bottom: 8%;
+    left: 3%;
+    width: 50%;
+    padding: 12px 11px;
+    animation-delay: -3s;
+}
+
+.ng-catalog-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 34px;
-    margin-top: 19px;
-    padding: 0 11px;
-    border: 1px solid #d8e4ef;
-    border-radius: 10px;
-    background: white;
-    color: #8ca0b6;
-    font-size: clamp(0.35rem, 0.58vw, 0.5rem);
+    gap: 7px;
+    margin-bottom: 10px;
 }
 
-.neo-search b {
-    color: #25518a;
-    font-size: 0.8rem;
+.ng-catalog-head strong {
+    font-size: clamp(0.4rem, 0.58vw, 0.52rem);
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
 }
 
-.neo-heading {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0 10px;
-    font-size: clamp(0.4rem, 0.62vw, 0.57rem);
+.ng-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 7px;
+    border: 1px solid rgba(226, 199, 93, 0.3);
+    border-radius: 999px;
+    color: #e2c75d;
+    font-size: clamp(0.24rem, 0.36vw, 0.31rem);
+    white-space: nowrap;
 }
 
-.neo-heading strong {
-    color: #142949;
-    font-weight: 700;
+.ng-sort svg {
+    width: 9px;
+    height: 9px;
 }
 
-.neo-heading span {
-    color: #467cc0;
-    font-size: 0.85em;
-}
-
-.neo-resources {
+.ng-catalog-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 7px;
 }
 
-.neo-resources div {
+.ng-catalog-grid > div {
+    position: relative;
     display: grid;
+    gap: 4px;
+    justify-items: center;
     min-width: 0;
-    padding: 10px 8px;
-    border: 1px solid #dce7f1;
+    padding: 8px 4px;
     border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(32, 77, 125, 0.04);
+    background: #aab8cc;
+    color: #16243f;
 }
 
-.neo-resources i {
-    display: grid;
-    place-items: center;
-    width: 23px;
-    height: 23px;
-    margin-bottom: 7px;
-    border-radius: 7px;
-    background: #edf4ff;
-    color: #2b66ad;
-    font-size: 0.56rem;
-    font-style: normal;
+.ng-catalog-grid svg {
+    width: 18px;
+    height: 18px;
 }
 
-.neo-resources span {
+.ng-catalog-grid span {
+    max-width: 100%;
     overflow: hidden;
-    color: #1a3252;
-    font-size: clamp(0.34rem, 0.58vw, 0.48rem);
-    font-weight: 600;
+    font-size: clamp(0.23rem, 0.35vw, 0.3rem);
+    font-weight: 700;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.neo-resources small {
-    margin-top: 3px;
-    color: #8496a9;
-    font-size: clamp(0.25rem, 0.4vw, 0.34rem);
+.ng-catalog-grid .is-featured {
+    box-shadow: 0 0 0 1.5px #e2c75d;
 }
 
-.neo-bottom-nav {
+.ng-catalog-grid .is-featured i {
     position: absolute;
-    right: 15px;
-    bottom: 13px;
-    left: 15px;
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-    border-radius: 11px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(35, 66, 98, 0.09);
-}
-
-.neo-bottom-nav i {
-    width: 8px;
-    height: 8px;
-    border: 2px solid #a4b2c1;
-    border-radius: 3px;
-}
-
-.neo-bottom-nav i:first-child {
-    border-color: #2f68ad;
-    background: #2f68ad;
-}
-
-.neo-floating-card {
-    position: absolute;
-    z-index: 6;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    padding: 12px 14px;
-    border: 1px solid rgba(133, 192, 255, 0.22);
-    border-radius: 13px;
-    background: rgba(10, 27, 52, 0.88);
-    color: white;
-    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.32);
-    backdrop-filter: blur(12px);
-    font-family: var(--font-mono);
-    transform: translateZ(52px);
-}
-
-.neo-floating-card div {
-    display: grid;
-}
-
-.neo-floating-card small {
-    color: #8ea7c2;
-    font-size: clamp(0.38rem, 0.54vw, 0.48rem);
-}
-
-.neo-floating-card strong {
-    margin-top: 2px;
-    font-size: clamp(0.48rem, 0.68vw, 0.6rem);
-    font-weight: 500;
-}
-
-.mini-icon,
-.sync-pulse {
+    top: -5px;
+    right: -5px;
     display: grid;
     place-items: center;
-    width: 28px;
-    height: 28px;
-    flex: 0 0 auto;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
-    background: rgba(93, 241, 184, 0.11);
-    color: #6af1bc;
-    font-size: 0.75rem;
+    background: #e2c75d;
+    color: #16243f;
+    font-size: 0.4rem;
+    font-style: normal;
 }
 
-.neo-floating-card--booking {
-    top: 29%;
-    right: 6%;
-    animation: card-float 5s ease-in-out infinite;
-}
-
-.neo-floating-card--sync {
-    right: 11%;
-    bottom: 18%;
-    animation: card-float 6s -2s ease-in-out infinite;
-}
-
-.sync-pulse {
-    position: relative;
-    width: 11px;
-    height: 11px;
-    margin: 8px;
-    background: #6af1bc;
-    box-shadow: 0 0 12px #6af1bc;
-}
-
-.sync-pulse::after {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    border: 1px solid rgba(106, 241, 188, 0.5);
-    border-radius: 50%;
-    animation: brand-ping 2s infinite;
+.ng-menu-tile svg,
+.ng-catalog-grid svg,
+.ng-emblem svg,
+.ng-topbar-actions svg,
+.ng-bot-avatar svg,
+.ng-sort svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 @keyframes card-float {
@@ -3344,21 +3370,23 @@ svg {
         font-size: 0.57rem;
     }
 
-    .neo-phone {
-        top: 11%;
-        bottom: 7%;
-        left: 8%;
-        width: 52%;
-    }
-
-    .neo-floating-card--booking {
-        top: 28%;
+    .ng-device {
+        top: 8%;
         right: 3%;
+        bottom: 8%;
+        width: 53%;
     }
 
-    .neo-floating-card--sync {
-        right: 4%;
-        bottom: 17%;
+    .ng-bot {
+        top: 10%;
+        left: 3%;
+        width: 46%;
+    }
+
+    .ng-catalog {
+        bottom: 7%;
+        left: 3%;
+        width: 48%;
     }
 
     .black-hole-system {
@@ -3519,40 +3547,37 @@ svg {
         min-height: 470px;
     }
 
-    .neo-phone {
-        left: 5%;
-        width: 58%;
+    .ng-device {
+        right: 2%;
+        width: 57%;
         border-radius: 28px;
     }
 
-    .phone-screen {
-        padding-inline: 10px;
+    .ng-screen {
         border-radius: 22px;
     }
 
-    .neo-resources div:nth-child(n + 3) {
+    .ng-menu-item:nth-child(n + 5) {
         display: none;
     }
 
-    .neo-resources {
-        grid-template-columns: 1fr;
+    .ng-float {
+        padding: 9px 10px;
     }
 
-    .neo-floating-card {
-        padding: 10px;
+    /* Una sola tarjeta flotante mantiene legible la composición en móvil. */
+    .ng-bot {
+        display: none;
     }
 
-    .mini-icon {
-        width: 24px;
-        height: 24px;
+    .ng-catalog {
+        bottom: 6%;
+        left: 2%;
+        width: 52%;
     }
 
-    .neo-floating-card--booking {
-        top: 33%;
-    }
-
-    .neo-floating-card--sync {
-        bottom: 19%;
+    .ng-catalog-grid > div:nth-child(n + 5) {
+        display: none;
     }
 
     .science-chip {
@@ -3925,459 +3950,463 @@ svg {
 }
 
 /* ----------------------------------------------------------------
-   MotoCheck visual
+   MotoCheck — recreación fiel de la interfaz
    ---------------------------------------------------------------- */
 
-.moto-preview {
+.mc-preview {
     background:
-        radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.62), transparent 28%),
-        linear-gradient(145deg, #d8d4ca, #bfc4bd 58%, #aab3ad);
+        radial-gradient(circle at 74% 12%, rgba(244, 99, 30, 0.14), transparent 30%),
+        linear-gradient(150deg, #151211, #0b0b0b 55%, #141110);
 }
 
-.moto-preview::before {
+.mc-preview::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(41, 52, 52, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(41, 52, 52, 0.045) 1px, transparent 1px);
-    background-size: 32px 32px;
-    mask-image: linear-gradient(110deg, black, transparent 86%);
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(black, transparent 92%);
 }
 
-.visual-caption--paper {
-    border-color: rgba(35, 43, 42, 0.13);
-    background: rgba(238, 237, 230, 0.75);
-    color: rgba(35, 43, 42, 0.68);
-}
-
-.moto-blueprint {
+.mc-device {
     position: absolute;
-    top: 12%;
-    bottom: 10%;
-    left: 3%;
-    width: 61%;
-    border: 1px solid rgba(42, 57, 55, 0.13);
-    border-radius: 15px;
-    overflow: hidden;
-    transform: translateZ(12px);
-}
-
-.blueprint-label {
-    position: absolute;
-    z-index: 3;
-    left: 14px;
-    color: rgba(39, 53, 51, 0.52);
-    font-family: var(--font-mono);
-    font-size: 0.45rem;
-    letter-spacing: 0.12em;
-}
-
-.blueprint-label--top {
-    top: 12px;
-}
-
-.blueprint-label--bottom {
-    bottom: 12px;
-}
-
-.moto-outline {
-    position: absolute;
-    top: 18%;
-    left: -9%;
-    width: 114%;
-    height: 66%;
-    overflow: visible;
-}
-
-.moto-outline-grid path {
-    fill: none;
-    stroke: rgba(46, 65, 61, 0.075);
-    stroke-width: 1;
-}
-
-.moto-drawing circle,
-.moto-drawing path {
-    fill: none;
-    stroke: #647c74;
-    stroke-width: 2.1;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.moto-drawing path:nth-of-type(2) {
-    fill: rgba(100, 124, 116, 0.08);
-}
-
-.moto-scan-points circle {
-    fill: #b46f45;
-    stroke: rgba(255, 255, 255, 0.58);
-    stroke-width: 2;
-}
-
-.moto-scan-line {
-    position: absolute;
-    z-index: 2;
-    top: 14%;
-    bottom: 14%;
-    left: 12%;
-    width: 1px;
-    background: linear-gradient(transparent, rgba(180, 111, 69, 0.75), transparent);
-    animation: moto-scan 5.8s var(--ease) infinite alternate;
-}
-
-@keyframes moto-scan {
-    to { transform: translateX(265px); }
-}
-
-.moto-device {
-    position: absolute;
-    z-index: 6;
+    z-index: 5;
     top: 7%;
-    right: 9%;
-    bottom: 6%;
+    bottom: 7%;
+    left: 4%;
     width: 43%;
     padding: 7px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 34px;
-    background: #1a1e1f;
-    box-shadow: 0 28px 54px rgba(43, 51, 48, 0.28);
-    transform: translateZ(35px) rotate(1.5deg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    background: #090909;
+    box-shadow:
+        0 28px 56px rgba(0, 0, 0, 0.5),
+        14px 0 46px rgba(244, 99, 30, 0.1);
+    transform: translateZ(34px) rotate(-1.4deg);
 }
 
-.moto-device-speaker {
+.mc-notch {
     position: absolute;
     z-index: 4;
-    top: 13px;
+    top: 12px;
     left: 50%;
-    width: 27%;
-    height: 14px;
-    border-radius: 0 0 10px 10px;
-    background: #1a1e1f;
+    width: 24%;
+    height: 13px;
+    border-radius: 0 0 9px 9px;
+    background: #090909;
     transform: translateX(-50%);
 }
 
-.moto-screen {
+.mc-screen {
     position: relative;
     height: 100%;
-    padding: 35px 14px 13px;
-    border-radius: 27px;
-    background: #f6f5f1;
-    color: #252c2d;
+    padding: 30px 12px 12px;
+    border-radius: 26px;
+    background: #0b0b0b;
+    color: #f3f1ee;
     overflow: hidden;
 }
 
-.moto-appbar {
-    display: grid;
-    grid-template-columns: 31px 1fr 6px;
-    align-items: center;
+.mc-greeting {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 8px;
-    font-family: var(--font-display);
 }
 
-.moto-logo {
+.mc-greeting small {
+    color: #9a9792;
+    font-size: clamp(0.33rem, 0.5vw, 0.44rem);
+}
+
+.mc-greeting strong {
+    display: block;
+    margin-top: 1px;
+    font-size: clamp(0.58rem, 0.95vw, 0.82rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.mc-bell {
+    position: relative;
     display: grid;
     place-items: center;
-    width: 31px;
-    height: 31px;
-    border-radius: 9px;
-    background: #2e3c39;
-    color: #f3f1ea;
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 600;
-}
-
-.moto-appbar > span:nth-child(2) {
-    display: grid;
-    line-height: 1.18;
-}
-
-.moto-appbar strong {
-    font-size: clamp(0.48rem, 0.72vw, 0.63rem);
-    font-weight: 600;
-}
-
-.moto-appbar small {
-    color: #7d8784;
-    font-size: 0.52em;
-}
-
-.moto-appbar > i {
-    width: 6px;
-    height: 6px;
+    width: 23px;
+    height: 23px;
+    flex: 0 0 auto;
     border-radius: 50%;
-    background: #7a9a8f;
+    background: #1c1c1c;
+    color: #cdcac5;
 }
 
-.moto-welcome {
-    display: grid;
-    margin-top: 20px;
+.mc-bell svg {
+    width: 12px;
+    height: 12px;
 }
 
-.moto-welcome small {
-    color: #a06540;
-    font-family: var(--font-mono);
-    font-size: clamp(0.3rem, 0.43vw, 0.38rem);
-    letter-spacing: 0.1em;
+.mc-bell b {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 5px;
+    height: 5px;
+    border: 1.5px solid #0b0b0b;
+    border-radius: 50%;
+    background: #f4631e;
 }
 
-.moto-welcome strong {
-    margin-top: 5px;
-    font-size: clamp(0.72rem, 1.18vw, 1rem);
-    letter-spacing: -0.035em;
+.mc-bike {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    margin-top: 13px;
+    padding: 11px;
+    border-radius: 15px;
+    background: #1a1a1a;
 }
 
-.moto-welcome p {
-    margin-top: 4px;
-    color: #74807c;
-    font-size: clamp(0.38rem, 0.55vw, 0.48rem);
-    line-height: 1.4;
+.mc-bike strong {
+    font-size: clamp(0.45rem, 0.68vw, 0.58rem);
+    font-weight: 600;
 }
 
-.moto-capture-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 5px;
-    margin-top: 14px;
+.mc-bike small {
+    display: block;
+    margin-top: 2px;
+    color: #9a9792;
+    font-size: clamp(0.29rem, 0.44vw, 0.39rem);
 }
 
-.moto-capture-grid div {
-    display: grid;
-    min-width: 0;
-    padding: 8px 5px;
-    border: 1px solid #dfe1dc;
-    border-radius: 9px;
-    background: white;
-}
-
-.moto-capture-grid i {
-    display: grid;
-    place-items: center;
-    width: 20px;
-    height: 20px;
-    margin-bottom: 6px;
-    border-radius: 6px;
-    background: #e9eeeb;
-    color: #4c675f;
-    font-family: var(--font-mono);
-    font-size: 0.48rem;
+.mc-bike em {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 7px;
+    color: #898681;
+    font-size: clamp(0.25rem, 0.38vw, 0.33rem);
     font-style: normal;
 }
 
-.moto-capture-grid div:nth-child(2) i {
-    background: #f2e9e2;
-    color: #a06540;
+.mc-bike em svg {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
 }
 
-.moto-capture-grid strong {
-    overflow: hidden;
-    color: #35413e;
-    font-size: clamp(0.3rem, 0.47vw, 0.41rem);
-    text-overflow: ellipsis;
+.mc-bike-icon {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: rgba(190, 55, 40, 0.22);
+    color: #e2604b;
 }
 
-.moto-capture-grid small {
+.mc-bike-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.mc-section-title {
+    margin: 14px 0 7px;
+    font-size: clamp(0.43rem, 0.64vw, 0.55rem);
+    font-weight: 600;
+}
+
+.mc-actions {
+    display: grid;
+    gap: 6px;
+    list-style: none;
+}
+
+.mc-actions li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) 6px;
+    align-items: center;
+    gap: 9px;
+    padding: 9px;
+    border-radius: 13px;
+    background: #1a1a1a;
+}
+
+.mc-action-icon {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background: rgba(244, 99, 30, 0.14);
+    color: #f4762e;
+}
+
+.mc-action-icon svg {
+    width: 13px;
+    height: 13px;
+}
+
+.mc-actions strong {
+    display: block;
     overflow: hidden;
-    margin-top: 2px;
-    color: #8a9491;
-    font-size: clamp(0.23rem, 0.34vw, 0.3rem);
+    font-size: clamp(0.35rem, 0.53vw, 0.46rem);
+    font-weight: 600;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.moto-result {
-    margin-top: 13px;
-    padding: 11px;
-    border: 1px solid #dfe2de;
-    border-radius: 11px;
-    background: white;
-    box-shadow: 0 7px 16px rgba(49, 58, 55, 0.055);
-}
-
-.moto-result-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-    font-family: var(--font-mono);
-    font-size: clamp(0.22rem, 0.34vw, 0.29rem);
-    letter-spacing: 0.07em;
-}
-
-.moto-result-top span {
-    color: #89918f;
-}
-
-.moto-result-top strong {
-    color: #5e7d72;
-    font-weight: 500;
-}
-
-.moto-result h4 {
-    margin: 7px 0 4px;
-    font-size: clamp(0.48rem, 0.72vw, 0.62rem);
-    line-height: 1.25;
-}
-
-.moto-severity {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #8b6d58;
-    font-size: clamp(0.28rem, 0.4vw, 0.34rem);
-}
-
-.moto-severity i {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #bf8058;
-}
-
-.moto-progress {
-    height: 3px;
-    margin-top: 9px;
-    border-radius: 99px;
-    background: #e8eae6;
-    overflow: hidden;
-}
-
-.moto-progress span {
+.mc-actions small {
     display: block;
-    width: 87%;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #758f86, #b77a54);
+    overflow: hidden;
+    margin-top: 2px;
+    color: #8e8b86;
+    font-size: clamp(0.25rem, 0.37vw, 0.33rem);
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.moto-nav {
+.mc-actions i {
+    color: #6d6a66;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.mc-tabbar {
     position: absolute;
-    right: 14px;
-    bottom: 12px;
-    left: 14px;
+    right: 12px;
+    bottom: 11px;
+    left: 12px;
     display: flex;
     justify-content: space-around;
-    padding: 8px;
-    border: 1px solid #e4e5e1;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.93);
+    padding: 7px 4px;
+    border-radius: 15px;
+    background: #181818;
 }
 
-.moto-nav i {
-    width: 7px;
-    height: 7px;
-    border: 1px solid #9ba39f;
-    border-radius: 2px;
-}
-
-.moto-nav i:first-child {
-    border-color: #566f67;
-    background: #566f67;
-}
-
-.moto-float {
-    position: absolute;
-    z-index: 9;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 11px 13px;
-    border: 1px solid rgba(35, 45, 43, 0.13);
-    border-radius: 11px;
-    background: rgba(242, 241, 235, 0.9);
-    color: #283230;
-    box-shadow: 0 16px 34px rgba(50, 59, 55, 0.14);
-    backdrop-filter: blur(10px);
-    font-family: var(--font-mono);
-    transform: translateZ(55px);
-    animation: moto-float 7s ease-in-out infinite;
-}
-
-.moto-float > div:not(.moto-wave) {
+.mc-tabbar span {
     display: grid;
+    gap: 3px;
+    justify-items: center;
+    color: #7d7a76;
+    font-size: clamp(0.21rem, 0.32vw, 0.28rem);
 }
 
-.moto-float small {
-    color: #7a8581;
-    font-size: clamp(0.31rem, 0.43vw, 0.37rem);
-    letter-spacing: 0.08em;
-}
-
-.moto-float strong {
-    font-size: clamp(0.42rem, 0.6vw, 0.52rem);
-    font-weight: 500;
-}
-
-.moto-float-icon {
+.mc-tabbar i {
     display: grid;
     place-items: center;
-    width: 29px;
-    height: 29px;
-    flex: 0 0 auto;
-    border-radius: 8px;
-    background: #394943;
-    color: #eceae3;
-    font-size: 0.55rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.mc-tabbar svg {
+    width: 11px;
+    height: 11px;
+}
+
+.mc-tabbar .is-active {
+    color: #f4762e;
+}
+
+.mc-tabbar .is-active i {
+    background: #f4631e;
+    color: #141110;
+}
+
+.mc-float {
+    position: absolute;
+    z-index: 8;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    background: rgba(20, 20, 20, 0.94);
+    color: #efedea;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(12px);
+    font-family: var(--font-mono);
+    transform: translateZ(52px);
+    animation: card-float 7s ease-in-out infinite;
+}
+
+.mc-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.mc-metrics div {
+    display: grid;
+    gap: 2px;
+    justify-items: center;
+    min-width: 0;
+    padding: 9px 4px;
+    border-radius: 12px;
+    background: #1a1a1a;
+}
+
+.mc-metrics strong {
+    color: #f4762e;
+    font-size: clamp(0.48rem, 0.74vw, 0.64rem);
     font-weight: 600;
 }
 
-.moto-ai-card {
-    top: 21%;
-    left: 5%;
+.mc-metrics .is-green {
+    color: #55ad73;
 }
 
-.moto-audio-card {
-    bottom: 25%;
-    left: 4%;
+.mc-metrics small {
+    max-width: 100%;
+    overflow: hidden;
+    color: #8e8b86;
+    font-size: clamp(0.2rem, 0.31vw, 0.27rem);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mc-model,
+.mc-workshops {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 12px;
+}
+
+.mc-model {
+    top: 8%;
+    right: 4%;
+}
+
+.mc-workshops {
+    right: 5%;
+    bottom: 8%;
+    animation-delay: -4.5s;
+}
+
+.mc-float-icon {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    background: rgba(244, 99, 30, 0.16);
+    color: #f4762e;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.mc-float-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.mc-model small,
+.mc-workshops small {
+    display: block;
+    color: #8e8b86;
+    font-size: clamp(0.27rem, 0.39vw, 0.34rem);
+    letter-spacing: 0.1em;
+}
+
+.mc-model strong,
+.mc-workshops strong {
+    display: block;
+    margin-top: 2px;
+    font-size: clamp(0.37rem, 0.54vw, 0.47rem);
+    font-weight: 500;
+}
+
+.mc-result {
+    top: 27%;
+    right: 3%;
+    display: grid;
+    gap: 8px;
+    width: 46%;
+    padding: 13px 12px;
     animation-delay: -2.5s;
 }
 
-.moto-cost-card {
-    right: 4%;
-    bottom: 5%;
-    display: grid;
-    gap: 1px;
-    animation-delay: -4s;
-}
-
-.moto-cost-card strong {
-    color: #8c5939;
-    font-size: clamp(0.48rem, 0.72vw, 0.63rem);
-}
-
-.moto-cost-card strong span {
-    color: #7a8581;
-    font-size: 0.7em;
-}
-
-.moto-wave {
+.mc-result-head {
     display: flex;
     align-items: center;
-    gap: 2px;
-    height: 24px;
+    gap: 7px;
 }
 
-.moto-wave i {
-    width: 2px;
-    height: 35%;
-    border-radius: 2px;
-    background: #a86e49;
-    animation: moto-wave 1.6s ease-in-out infinite alternate;
+.mc-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border: 1px solid rgba(214, 160, 59, 0.5);
+    border-radius: 999px;
+    color: #d6a03b;
+    font-size: clamp(0.25rem, 0.37vw, 0.32rem);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
 }
 
-.moto-wave i:nth-child(2) { height: 65%; animation-delay: -0.2s; }
-.moto-wave i:nth-child(3) { height: 95%; animation-delay: -0.4s; }
-.moto-wave i:nth-child(4) { height: 48%; animation-delay: -0.6s; }
-.moto-wave i:nth-child(5) { height: 78%; animation-delay: -0.8s; }
-.moto-wave i:nth-child(6) { height: 40%; animation-delay: -1s; }
-.moto-wave i:nth-child(7) { height: 62%; animation-delay: -1.2s; }
-
-@keyframes moto-wave {
-    to { transform: scaleY(0.55); opacity: 0.58; }
+.mc-chip svg {
+    width: 8px;
+    height: 8px;
 }
 
-@keyframes moto-float {
-    50% { transform: translateZ(55px) translateY(-5px); }
+.mc-result-head small {
+    color: #908d88;
+    font-size: clamp(0.25rem, 0.37vw, 0.32rem);
+}
+
+.mc-result > strong {
+    font-family: var(--font-display);
+    font-size: clamp(0.48rem, 0.74vw, 0.63rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.22;
+}
+
+.mc-affected {
+    padding: 7px 8px;
+    border-radius: 9px;
+    background: #0c0c0c;
+    color: #e2604b;
+    font-size: clamp(0.25rem, 0.37vw, 0.32rem);
+    line-height: 1.4;
+    text-align: center;
+}
+
+.mc-causes {
+    display: grid;
+    gap: 4px;
+    list-style: none;
+}
+
+.mc-causes li {
+    position: relative;
+    padding-left: 9px;
+    color: #989590;
+    font-size: clamp(0.25rem, 0.37vw, 0.32rem);
+    line-height: 1.35;
+}
+
+.mc-causes li::before {
+    content: "";
+    position: absolute;
+    top: 0.48em;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #f4762e;
+}
+
+.mc-screen svg,
+.mc-float svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .project-status--moto {
@@ -4412,26 +4441,24 @@ svg {
         font-size: clamp(3.25rem, 15vw, 5rem);
     }
 
-    .moto-blueprint {
-        left: -7%;
-        width: 68%;
-    }
-
-    .moto-device {
-        right: 5%;
-        width: 49%;
-    }
-
-    .moto-ai-card {
+    .mc-device {
         left: 3%;
+        width: 53%;
     }
 
-    .moto-audio-card {
-        left: 3%;
-    }
-
-    .moto-cost-card {
+    .mc-model {
         right: 3%;
+    }
+
+    .mc-result {
+        top: 29%;
+        right: 2%;
+        width: 48%;
+    }
+
+    .mc-workshops {
+        right: 3%;
+        bottom: 7%;
     }
 }
 
@@ -4440,52 +4467,40 @@ svg {
         font-size: clamp(2.8rem, 13.2vw, 3.55rem);
     }
 
-    .moto-blueprint {
-        left: -18%;
-        width: 78%;
-    }
-
-    .moto-device {
-        top: 9%;
-        right: 3%;
-        bottom: 7%;
+    .mc-device {
+        left: 2%;
         width: 57%;
         border-radius: 28px;
     }
 
-    .moto-screen {
+    .mc-screen {
         padding-inline: 10px;
         border-radius: 22px;
     }
 
-    .moto-capture-grid div {
-        padding-inline: 3px;
+    .mc-float {
+        padding: 9px 10px;
     }
 
-    .moto-float {
-        padding: 9px;
+    .mc-model {
+        display: none;
     }
 
-    .moto-ai-card {
-        top: 23%;
-        left: 2%;
-    }
-
-    .moto-audio-card {
-        bottom: 25%;
-        left: 2%;
-    }
-
-    .moto-cost-card {
+    .mc-result {
+        top: 15%;
         right: 2%;
-        bottom: 4%;
+        width: 52%;
+    }
+
+    .mc-workshops {
+        right: 2%;
+        bottom: 6%;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .moto-scan-line,
-    .moto-float,
-    .moto-wave i {
+    .ng-float,
+    .mc-float {
         animation: none !important;
     }
 }
